@@ -1,0 +1,68 @@
+body {
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+main {
+	height: calc(100vh - 55px);
+}
+
+.navbar {
+	z-index: 11;
+}
+
+.scrollable {
+	display: block;
+	height: 100%;
+
+	padding: 15px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.form-label {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+main aside {
+	position: absolute;
+        
+        left: 0px;
+        top: 55px;
+        transform: translate(0%, 0px);
+
+	z-index: 10;
+
+	height: calc(100vh - 55px);
+	
+	background: --gray-dark;
+        color: white;
+	
+	transition: 0.7s transform;
+}
+
+main.collapsed aside {
+	transform: translate(-100%, 0px);
+}
+
+main aside .collapse-sidebar {
+	position: absolute;
+
+	right: -36px;
+	top: 60px;
+
+	z-index: 10;
+	font-size: 32px;
+	line-height: 32px;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+}
+
+#map.pointing {
+    z-index: 1051;
+    cursor: crosshair;
+}
